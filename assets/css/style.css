@@ -24,7 +24,7 @@ li {
 }
 
 body {
-    display: none;
+    /* display: none; */
 }
 
 .text {
@@ -87,7 +87,18 @@ header .link {
 
 /* HERO */
 
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
 section {
+    scroll-snap-align: start;
     position: sticky;
     top: 0;
     z-index: -1;

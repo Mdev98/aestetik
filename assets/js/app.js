@@ -14,7 +14,7 @@ function loadSVG() {
             fetchSVG("assets/images/aestetik.svg", ".hero-banner")
         ]).then(() => {
             // Show the body after SVGs are loaded
-            document.body.style.display = 'block';
+            // document.body.style.display = 'block';
         }).catch(error => {
             console.error('Error loading SVG:', error);
         });
