@@ -23,10 +23,6 @@ li {
     list-style: none;
 }
 
-body {
-    /* display: none; */
-}
-
 .text {
     font-family: var(--text-font);
     font-size: clamp(.8vw, 1.2vw, 1.5vw);
@@ -114,12 +110,12 @@ section {
 }
 
 .hero-banner {
-    min-width: 80vw;
+    max-width: 80vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 100px;
-    margin-left: 8vw;
+    margin-right: 3vw;
 }
 
 
