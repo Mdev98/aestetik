@@ -121,14 +121,14 @@ section {
 
 .about {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: var(--white);
     border: 1px solid var(--white);
 }
 
 .about-title {
     width: fit-content;
-    margin: 10vw auto 10px;
+    margin: 8vw auto 10px;
 }
 
 .about-text {
@@ -142,7 +142,7 @@ section {
     width: fit-content;
     margin: 0px auto;
     font-weight: 700;
-    transform: translateY(-3vw);
+    transform: translateY(5vw);
 }
 
 .cards {
@@ -153,6 +153,7 @@ section {
 
 .card {
     width: 20vw;
+    height: 30vh;
     margin: 0px 3vw;
 }
 
