@@ -11,7 +11,6 @@ function loadSVG() {
     requestAnimationFrame(() => {
         Promise.all([
             fetchSVG("assets/images/logo-aestetik.svg", ".logo"),
-            fetchSVG("assets/images/aestetik.svg", ".hero-banner")
         ]).then(() => {
             // Show the body after SVGs are loaded
             // document.body.style.display = 'block';

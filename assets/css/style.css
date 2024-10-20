@@ -7,12 +7,14 @@
     /* Fonts */
     --title-font: 'Asgard Trial', monospace;
     --text-font: 'freshwost', sans-serif;
+    
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* overflow: hidden; */
 }
 
 a {
@@ -142,7 +144,7 @@ section {
     width: fit-content;
     margin: 0px auto;
     font-weight: 700;
-    transform: translateY(5vw);
+    transform: translateY(3vw);
 }
 
 .cards {
@@ -153,7 +155,7 @@ section {
 
 .card {
     width: 20vw;
-    height: 30vh;
+    height: 35vh;
     margin: 0px 3vw;
 }
 
