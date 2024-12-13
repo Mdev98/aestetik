@@ -5,9 +5,17 @@
     --yellow: #FDC300;
     --blue: #100071;
     /* Fonts */
-    --title-font: 'Asgard Trial', monospace;
-    --text-font: 'freshwost', sans-serif;
+    --title-font: 'Asgard Trial', "Montserrat";
+    --text-font: 'freshwost', "Montserrat";
     
+}
+
+@font-face {
+    font-family: 'Asgard Trial';
+    src: 
+         url('fonts/Asgard Trial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -120,12 +128,18 @@ section {
     margin-right: 3vw;
 }
 
+/* ABOUT SECTION */
+
 
 .about {
     width: 100%;
     height: 100vh;
     background-color: var(--white);
     border: 1px solid var(--white);
+    background-image: url('../images/A.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .about-title {
@@ -195,121 +209,116 @@ section {
     font-weight: 700;
 }
 
-/* SVGS */
+/* SERVICES SECTION */
 
-#Tracé_906 {
-    transform: matrix(0.998, -0.07, 0.07, 0.998, 958.734, 400.939);
-    animation: expandUp 1s both;
+.services {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
 }
 
-#Tracé_907 {
-    animation : fadeIn 1s .3s both;
-    transform: translate(3px, 620px);
+.services-title {
+    width: fit-content;
+    margin: 8vw auto 10px;
+    color: var(--yellow);
 }
 
-#Tracé_908 {
-    transform : matrix(0.998, 0.07, -0.07, 0.998, 951.268, 741.869);
-    animation: expandDown 1s .8s both;
+.services-text {
+    width: 50vw;
+    text-align: center;
+    margin: auto; 
+    color: var(--white);
 }
 
-#eclair-icon {
-    transform : translate(1315px, 216px);
-    animation: scale 1s 1.2s both;
+.services-grid-parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 4vw;
+    grid-row-gap: 4vw;
+    padding: 1vw 8vw;
 }
 
-#Camada_3 {
-    transform : matrix(0.875, -0.485, 0.485, 0.875, 158.82, 238.594);
-    animation: arriveUp 1s 1.4s both;
+
+
+.services .container {
+    box-shadow: 1px 2px 2px #111;
+    border-radius: 20px;
 }
 
-#Groupe_750 {
-    transform : translateY(200px);
-    animation: fadeUp 1s 1.6s both;
+.illustration {
+    background-color: var(--beige);
+    height: 150px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-#Objects {
-    transform: matrix(1, -0.017, 0.017, 1, 56.977, 410.077);
-    animation: arriveDown 1s 1.8s both;
+.desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px 20px;
 }
 
-/* ANIMATION */
-
-
-@keyframes arriveUp {
-    from {
-        opacity: 0;
-        transform : matrix(0.875, -0.485, 0.485, 0.875, 158.82, 238.594);
-    } to {
-        opacity: 1;
-        transform : matrix(0.875, -0.485, 0.485, 0.875, 258.82, 338.594);
-    }
+.desc-services-text {
+    color: var(--yellow);
+    font-size: 1.5rem;
 }
 
-@keyframes arriveDown {
-    from {
-        opacity: 0;
-        transform : matrix(1, -0.017, 0.017, 1, 6.977, 610.077)
-    } to {
-        opacity: 1;
-        transform : matrix(1, -0.017, 0.017, 1, 56.977, 410.077)
-    }
+.services-action {
+    background-color: transparent;
+    color: var(--white);
+    width: fit-content;
+    display: block;
+}
+.grid-child-1 { grid-area: 1 / 1 / 2 / 2; }
+.grid-child-2 { grid-area: 1 / 3 / 2 / 4; }
+.grid-child-3 { grid-area: 2 / 1 / 3 / 2; }
+.grid-child-4 { grid-area: 2 / 3 / 3 / 4; }
+.grid-child-5 { 
+    grid-area: 1 / 2 / 3 / 3; 
+    margin-top: 10vh;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translate(3, 620px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(954px, 620px);
-    }
+/* TESTIMONIAL SECTION */
+
+.testimonies {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    border: 1px solid var(--white);
 }
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(200px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
+.testimonies-title {
+    width: fit-content;
+    margin: 8vw auto 10px;
+    color: var(--yellow);
 }
 
-@keyframes scale {
-    from {
-        opacity: 0;
-        transform: translate(1315px, 216px) scale(.9);
-    }
-    to {
-        opacity: 1;
-        transform: translate(1315px, 216px) scale(1);
-    }
+.testimonies-text {
+    width: 50vw;
+    text-align: center;
+    margin: auto; 
+    color: var(--blue);
 }
 
-@keyframes expandUp {
-
-    from {
-        opacity: 0;
-        transform: matrix(0.998, -0.07, 0.07, 0.2, 958.734, 400.939);
-    }
-    to {
-        opacity: 1;
-        transform: matrix(0.998, -0.07, 0.07, 1, 958.734, 400.939);
-    }
-
+.testimonie {
+    background-color: var(--beige);
+    width: 300px;
+    padding: 40px 50px;
+    border-radius: 40px;
 }
 
-@keyframes expandDown {
-
-    from {
-        opacity: 0;
-        transform: matrix(0.998, 0.07, -0.07, 0.1, 951.268, 741.869);
-    }
-    to {
-        opacity: 1;
-        transform: matrix(0.998, 0.07, -0.07, 0.9, 951.268, 741.869);
-    }
-
-}
+.slider {
+    width: 70%;
+    margin: 50px auto;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        var(--green) 10% 90%,
+    
