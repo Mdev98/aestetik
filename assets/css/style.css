@@ -126,7 +126,69 @@ section {
     align-items: center;
     margin-top: 100px;
     margin-right: 3vw;
+    position: relative;
 }
+
+#camada {
+    animation: arriveUp 1s 1.4s both, UpDown 2s 2.6s infinite;
+}
+
+#plume {
+    animation: arriveDown 1s 1.8s both, LeftRight 2s 2.6s linear infinite
+}
+
+#aestetik { 
+    animation: fadeUp 1s 1.6s both, rotate 6s 2.6s linear infinite;
+}
+
+@media (min-width: 768px) {
+    #plume {
+        min-width: 22vw;
+        position: absolute;
+        left: 4vw;
+        bottom: 0;
+    }
+
+    #camada {
+        min-width: 20vw;
+        position: absolute;
+        left: -2vw;
+        top: 5vh;
+    }
+
+    #aestetik {
+        min-width: 16vw;
+        position: absolute;
+        right: 3vw;
+        bottom: 15vh;
+    }
+}
+  
+/* Pour les écrans larges */
+@media (min-width: 1500px) {
+    #plume {
+        min-width: 8vw;
+        position: absolute;
+        left: 4vw;
+        bottom: 0;
+    }
+
+    #camada {
+        min-width: 15vw;
+        position: absolute;
+        left: 0vw;
+        top: 1vh;
+    }
+
+    #aestetik {
+        min-width: 0;
+        position: absolute;
+        right: 5vh;
+        bottom: 10vh;
+    }
+}
+
+
 
 /* ABOUT SECTION */
 
@@ -220,7 +282,7 @@ section {
 
 .services-title {
     width: fit-content;
-    margin: 8vw auto 10px;
+    margin:6.5vw auto 10px;
     color: var(--yellow);
 }
 
@@ -237,7 +299,8 @@ section {
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 4vw;
     grid-row-gap: 4vw;
-    padding: 1vw 8vw;
+    width: 90vw;
+    margin: 20px auto;
 }
 
 
@@ -245,11 +308,16 @@ section {
 .services .container {
     box-shadow: 1px 2px 2px #111;
     border-radius: 20px;
+    height: 25vh;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .illustration {
     background-color: var(--beige);
-    height: 150px;
+    height: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -262,6 +330,7 @@ section {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding: 10px 20px;
+    height: auto;
 }
 
 .desc-services-text {
@@ -282,6 +351,7 @@ section {
 .grid-child-5 { 
     grid-area: 1 / 2 / 3 / 3; 
     margin-top: 10vh;
+    margin-bottom: 5vh;
 }
 
 /* TESTIMONIAL SECTION */
@@ -408,7 +478,7 @@ section {
 
 #eclair-icon {
     transform : translate(1315px, 216px);
-    animation: scale 1s 1.2s both;
+    animation: scale 1s 1.2s both, ZoomoutZoomin 2s 2.6s linear infinite;
 }
 
 #Camada_3 {
@@ -432,20 +502,20 @@ section {
 @keyframes arriveUp {
     from {
         opacity: 0;
-        transform : matrix(0.875, -0.485, 0.485, 0.875, 158.82, 238.594);
+        transform : translateY(-50px);
     } to {
         opacity: 1;
-        transform : matrix(0.875, -0.485, 0.485, 0.875, 258.82, 338.594);
+        transform : translateY(0px)
     }
 }
 
 @keyframes arriveDown {
     from {
         opacity: 0;
-        transform : matrix(1, -0.017, 0.017, 1, 6.977, 610.077)
+        transform : translateY(50px);
     } to {
         opacity: 1;
-        transform : matrix(1, -0.017, 0.017, 1, 56.977, 410.077)
+        transform : translateY(0px)
     }
 }
 
@@ -478,6 +548,18 @@ section {
     }
     to {
         opacity: 1;
+        transform: translate(1315px, 216px) scale(1);
+    }
+}
+
+@keyframes ZoomoutZoomin {
+    0% {
+        transform: translate(1315px, 216px) scale(1);
+    } 
+    50% {
+        transform: translate(1315px, 216px) scale(.9);
+    }
+    100% {
         transform: translate(1315px, 216px) scale(1);
     }
 }
@@ -522,5 +604,38 @@ section {
     }
     to {
         right: calc(var(--taille) * -1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes UpDown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes LeftRight {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(1deg);
     }
 }
