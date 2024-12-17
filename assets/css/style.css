@@ -141,7 +141,30 @@ section {
     animation: fadeUp 1s 1.6s both, rotate 6s 2.6s linear infinite;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
+    #plume {
+        min-width: 24vw;
+        position: absolute;
+        left: 4vw;
+        bottom: 5vh;
+    }
+
+    #camada {
+        min-width: 20vw;
+        position: absolute;
+        left: -2vw;
+        top: 12vh;
+    }
+
+    #aestetik {
+        min-width: 16vw;
+        position: absolute;
+        right: 3vw;
+        bottom: 15vh;
+    }
+}
+
+@media (min-width: 1440px) {
     #plume {
         min-width: 22vw;
         position: absolute;
