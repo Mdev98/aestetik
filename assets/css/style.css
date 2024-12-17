@@ -143,68 +143,68 @@ section {
 
 @media (min-width: 1024px) and (max-width: 1440px) {
     #plume {
-        min-width: 24vw;
+        width: 20vw;
         position: absolute;
-        left: 4vw;
-        bottom: 5vh;
+        left: 6vw;
+        bottom: 9vh;
     }
 
     #camada {
-        min-width: 20vw;
+        width: 20vw;
         position: absolute;
-        left: -2vw;
+        left: -3vw;
         top: 12vh;
     }
 
     #aestetik {
-        min-width: 16vw;
+        width: 15vw;
         position: absolute;
-        right: 3vw;
-        bottom: 15vh;
+        right: 4vw;
+        bottom: 18vh;
     }
 }
 
 @media (min-width: 1440px) {
     #plume {
-        min-width: 22vw;
+        width: 20vw;
         position: absolute;
-        left: 4vw;
-        bottom: 0;
+        left: 6vw;
+        bottom: 1vh;
     }
 
     #camada {
-        min-width: 20vw;
+        width: 16vw;
         position: absolute;
-        left: -2vw;
-        top: 5vh;
+        left: 0vw;
+        top: 7vh;
     }
 
     #aestetik {
-        min-width: 16vw;
+        width: 15vw;
         position: absolute;
         right: 3vw;
-        bottom: 15vh;
+        bottom: 10vh;
     }
 }
   
 /* Pour les écrans larges */
 @media (min-width: 1500px) {
     #plume {
-        min-width: 8vw;
+        max-width: 16vw;
         position: absolute;
-        left: 4vw;
-        bottom: 0;
+        left: 5vw;
+        bottom: -1vh;
     }
 
     #camada {
-        min-width: 15vw;
+        max-width: 15vw;
         position: absolute;
         left: 0vw;
         top: 1vh;
     }
 
     #aestetik {
-        min-width: 0;
+        max-width: 15vw;
         position: absolute;
         right: 5vh;
         bottom: 10vh;
