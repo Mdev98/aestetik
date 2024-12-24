@@ -33,9 +33,15 @@ li {
     list-style: none;
 }
 
-.text {
+/* .text {
     font-family: var(--text-font);
     font-size: clamp(.8vw, 1.2vw, 1.5vw);
+    color: var(--blue);
+} */
+
+.text {
+    font-family: var(--text-font);
+    font-size: clamp(1vw, 1.4vw, 2.5vw);
     color: var(--blue);
 }
 
@@ -68,6 +74,7 @@ header {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 3;
 }
 
 .menu {
@@ -107,7 +114,7 @@ section {
     /* scroll-snap-align: start; */
     position: sticky;
     top: 0;
-    z-index: -1;
+    z-index: 2;
 }
 
 .hero {
@@ -141,7 +148,7 @@ section {
     animation: fadeUp 1s 1.6s both, rotate 6s 2.6s linear infinite;
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1430px) {
     #plume {
         width: 20vw;
         position: absolute;
@@ -176,7 +183,7 @@ section {
         width: 16vw;
         position: absolute;
         left: 0vw;
-        top: 7vh;
+        top: 5vh;
     }
 
     #aestetik {
@@ -237,6 +244,7 @@ section {
     text-align: center;
     margin: auto; 
 }
+
 
 .about-action {
     display: block;
@@ -332,8 +340,7 @@ section {
     box-shadow: 1px 2px 2px #111;
     border-radius: 20px;
     height: 25vh;
-    display: flex
-;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -482,7 +489,286 @@ section {
     animation: autorun2 60s linear infinite;
     animation-delay: calc( (60s / var(--count)) * (var(--index) - 1) - 60s);
 }
+
+/* PORTFOLIO */
+
+.portfolio {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    position: relative;
+}
+
+.portfolio-title {
+    width: fit-content;
+    margin: 8vw auto 10px;
+    color: var(--yellow);
+}
+
+.portfolio-text {
+    width: 50vw;
+    text-align: center;
+    margin: auto; 
+    color: var(--white);
+}
+
+.porfolio-grid-parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5vw;
+    grid-row-gap: 5vh;
+
+    width: 80vw;
+    margin: 20px auto;
+}
+
+.portfolio-container {
+    box-shadow: 1px 2px 2px #111;
+    border-radius: 20px;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio-illustration {
+    background-color: var(--beige);
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.portfolio-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px 20px;
+    height: auto;
+}
+
+.desc-portfolio-text {
+    color: var(--yellow);
+    font-size: 1.5rem;
+}
+
+.portfolio-action {
+    background-color: transparent;
+    color: var(--white);
+    width: fit-content;
+    display: block;
+}
+
+.portfolio-grid-child-1 { grid-area: 1 / 2 / 2 / 3; }
+.portfolio-grid-child-2 { grid-area: 2 / 1 / 3 / 2; }
+.portfolio-grid-child-3 { grid-area: 2 / 2 / 3 / 3; }
+.portfolio-grid-child-4 { grid-area: 2 / 3 / 3 / 4; }
+
+/* CONTACT SECTION */
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 100px 80px;
+}
+
+.contact-title {
+    width: fit-content;
+    margin: 10px 0px;
+    color: var(--yellow);
+    font-size: clamp(1.5vw, 6.5vw, 7vw);
+}
+
+.contact-text {
+    width: 20vw;
+    text-align: left;
+    margin: auto; 
+    color: var(--blue);
+}
+
+.contact-form {
+    width: 55vw;
+    height: 65vh;
+}
+
+.contact-form form {
+    width: 100%;
+    padding: 20px;
+    margin-left: 5vw;
+    position: relative;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-field {
+    width: 100%;
+    margin: 40px 0px;
+}
+
+label {
+    display: block;
+    font-family: freshwost;
+    color: var(--blue);
+    margin-left: 20px;
+}
+
+.form-field input {
+    outline: none;
+    border: none;
+    border-bottom: 4px solid var(--blue);
+    width: 79%;
+    padding: 10px 20px;
+    font-family: freshwost;
+    font-size: clamp(.8vw, 1.2vw, 1.5vw);
+}
+
+textarea {
+    font-family: freshwost;
+    display: block;
+    border: none;
+    outline: none;
+    border-bottom: 4px solid var(--blue);
+    width: 90%;
+    height: 30vh;
+    font-size: clamp(.8vw, 1.2vw, 1.5vw);
+}
+
+.contact-form-action {
+    border: none;
+    color: var(--blue);
+    font-family: freshwost;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+
+    bottom: 5vh;
+    right: 7vw;
+}
+
+/* CONCLUSION SECTION */
+
+.conclusion {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    padding-left: 20vw;
+    padding-bottom: 40vh;
+}
+
+.conclusion-text {
+    font-size: clamp(.8vw, 1.4vw, 2vw);
+}
+
+.title-group {
+    position: relative;
+    margin-top: 25vh;
+}
+
+.conclusion-title {
+    color: var(--white);
+    font-weight: bold;
+    z-index: 1;
+}
+
+.conclusion-title-blur {
+    color: var(--white);
+    font-weight: bold;
+    font-size: clamp(1.5vw, 10vw, 12vw);
+    opacity: .2;
+    position: absolute;
+    top: -12vh;
+    left: -2vw;
+}
+
+.paragraph {
+    width: 40vw;
+    color: var(--blue);
+    background-color: var(--white);
+    margin-top: 5vh;
+    padding: 5vh 15vw 5vh 3vw;
+    border-radius: 20px;
+    position: relative;
+}
+
+.conclusion-subtext {
+    color: var(--yellow);
+    font-size: 1.5rem;
+    margin-top: 5vh;
+}
+
+#conclusion-aestetik {
+    position: absolute;
+    right: 4vw;
+    max-width: 8vw;
+}
+
+#micro {
+    position: absolute;
+    max-width: 55vw;
+    top: -40vh;
+    left: 30vw;
+    z-index: 5;
+}
+
+.signature {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--blue);
+}
+
+
+
+.footer {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    padding: 5px 50px;
+}
+
+.footer-text {
+    color: var(--white);
+    font-weight: bold;
+    font-size: clamp(.8vw, 3vw, 3.5vw);
+    text-align: center;
+}
+
+
+  
 /* SVGS */
+
+#Andréa_Sène {
+    stroke-dasharray: 2000; /* Adjust to the length of your text's path */
+    stroke-dashoffset: 2000; /* Initially hidden */
+    animation: draw 5s ease-in-out both; /* Animate the drawing */
+    animation-timeline: view(90% -30%);
+}
+
+@keyframes draw {
+    from {
+      stroke-dashoffset: 2000; /* Fully hide the stroke */
+      fill: transparent;
+    }
+    to {
+      stroke-dashoffset: 0; /* Fully reveal the stroke */
+      fill: #fdc300;
+    }
+  }
 
 #Tracé_906 {
     transform: matrix(0.998, -0.07, 0.07, 0.998, 958.734, 400.939);
@@ -660,5 +946,230 @@ section {
     }
     100% {
         transform: rotate(1deg);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1430px) {
+    #plume {
+        width: 20vw;
+        position: absolute;
+        left: 6vw;
+        bottom: 9vh;
+    }
+
+    #camada {
+        width: 20vw;
+        position: absolute;
+        left: -3vw;
+        top: 12vh;
+    }
+
+    #aestetik {
+        width: 15vw;
+        position: absolute;
+        right: 4vw;
+        bottom: 18vh;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        margin: 5vw 0px;
+    }
+
+    .card:nth-child(odd) {
+        margin-top: 8vw;
+    }
+
+    .card-text {
+        font-size: clamp(1vw, 1.5vw, 2.2vw);
+        margin: 1vw 0px;
+    }
+
+    .card-title {
+        font-size: clamp(1vw, 2.5vw, 3vw);
+    }
+
+    .card {
+        width: 25vw;
+        height: 35vh;
+        margin: 0px 3vw;
+    }
+
+    .about-title {
+        width: fit-content;
+        margin: 15vw auto 10px;
+    }
+
+    .about-text {
+        width: 55vw;
+        text-align: center;
+        margin: auto;
+    }
+
+    .menu {
+        width: 40vw;
+    }
+
+    .services-title {
+        margin: 16vw auto 10px;
+    }
+
+    .services-grid-parent {
+        margin: 5vh auto;
+    }
+
+    .desc-services-text {
+        font-size: 1.3rem;
+    }
+
+    .services-action {
+        font-size: 1.2rem;
+    }
+
+    .testimonies-title {
+        margin: 16vw auto 10px;
+    }
+
+    .pill {
+        height: 5vh;
+    }
+
+    .client-profile {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .porfolio-grid-parent {
+        width: 90vw;
+    }
+
+    .portfolio-title {
+        margin: 16vw auto 10px;
+    }
+
+    .desc-portfolio-text {
+        font-size: 1.4rem;
+    }
+
+    .contact-text {
+        width: 25vw;
+    }
+
+    .conclusion-title-blur {
+        top: -6vh;
+    }
+
+    .conclusion {
+        padding-bottom: 15vh;
+    }
+
+    .conclusion-text {
+        font-size: clamp(1vw, 1.9vw, 2vw);
+    }
+
+    .conclusion-subtext {
+        margin-top: 1vh;
+        display: block;
+    }
+
+    #conclusion-aestetik {
+        right: 2.5vw;
+        bottom: -4vh;
+        max-width: 8vw;
+    }
+
+    .paragraph {
+        width: 40vw;
+        padding: 2vh 10vw 2vh 2vw;
+    }
+
+    #micro {
+        position: absolute;
+        max-width: 55vw;
+        top: -25vh;
+        left: 25vw;
+        z-index: 5;
+    }
+
+    .signature svg {
+        width: 500px; 
+        position: relative;
+        top: -5vh;
+    }
+}
+
+@media (min-width: 1440px) {
+    #plume {
+        width: 20vw;
+        position: absolute;
+        left: 6vw;
+        bottom: 1vh;
+    }
+
+    #camada {
+        width: 16vw;
+        position: absolute;
+        left: 0vw;
+        top: 9vh;
+    }
+
+    #aestetik {
+        width: 15vw;
+        position: absolute;
+        right: 3vw;
+        bottom: 10vh;
+    }
+
+    #micro {
+        position: absolute;
+        max-width: 55vw;
+        top: -44vh;
+        left: 25vw;
+        z-index: 5;
+    }
+}
+  
+/* Pour les écrans larges */
+@media (min-width: 1500px) {
+    #plume {
+        max-width: 16vw;
+        position: absolute;
+        left: 5vw;
+        bottom: -1vh;
+    }
+
+    #camada {
+        max-width: 15vw;
+        position: absolute;
+        left: 0vw;
+        top: 1vh;
+    }
+
+    #aestetik {
+        max-width: 15vw;
+        position: absolute;
+        right: 5vh;
+        bottom: 10vh;
+    }
+
+    .signature svg {
+        width: 900px; 
+        position: relative;
+        top: -5vh;
+    }
+
+    #conclusion-aestetik {
+        position: absolute;
+        right: 2vw;
+        bottom: -6vh;
+        max-width: 10vw;
+    }
+
+    .conclusion-subtext {
+        color: var(--yellow);
+        font-size: 2rem;
+        margin-top: 2vh;
+        display: block;
     }
 }
