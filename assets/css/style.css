@@ -949,6 +949,8 @@ textarea {
     }
 }
 
+
+
 @media (min-width: 1024px) and (max-width: 1430px) {
     #plume {
         width: 20vw;
@@ -1097,6 +1099,34 @@ textarea {
         position: relative;
         top: -5vh;
     }
+}
+
+@media (min-width: 1280px) and (max-width: 1430px) {
+    #plume {
+        width: 20vw;
+        position: absolute;
+        left: 6vw;
+        bottom: 4vh;
+    }
+
+    #camada {
+        width: 20vw;
+        position: absolute;
+        left: -3vw;
+        top: 6vh;
+    }
+
+    #aestetik {
+        width: 15vw;
+        position: absolute;
+        right: 4vw;
+        bottom: 15vh;
+    }
+
+    .signature svg {
+        left: 4.3vw;
+    }
+    
 }
 
 @media (min-width: 1440px) {
