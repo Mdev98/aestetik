@@ -1,0 +1,99 @@
+:root {
+    /* Colors: */
+    --white: #FFFFFF;
+    --beige: #FFFCE5;
+    --yellow: #FDC300;
+    --blue: #100071;
+    /* Fonts */
+    --title-font: 'Asgard Trial', "Montserrat";
+    --text-font: 'freshwost', "Montserrat";
+    
+}
+
+@font-face {
+    font-family: 'Asgard Trial';
+    src: 
+         url('fonts/Asgard Trial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* .text {
+    font-family: var(--text-font);
+    font-size: clamp(.8vw, 1.2vw, 1.5vw);
+    color: var(--blue);
+} */
+
+.text {
+    font-family: var(--text-font);
+    font-size: clamp(1vw, 1.4vw, 2.5vw);
+    color: var(--blue);
+}
+
+.title {
+    font-family: var(--title-font);
+    font-size: clamp(.8vw, 5vw, 7vw);
+    font-weight: 500;
+    color: var(--yellow);
+}
+
+.action {
+    padding: 10px 20px;
+    border-radius: 40px;
+    background-color: var(--yellow);
+    color: var(--blue);
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    padding: 30px 40px;
+    margin: auto;
+    background-color: var(--blue);
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+}
+
+header .link {
+    color: var(--white);
+}
+
+.logo {
+    width: 6vw;
+    height: 6vh;
+}
+
+.logo svg {
+    width: 100%;
+    height: 100%;
+}
