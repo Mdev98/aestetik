@@ -12,7 +12,7 @@ body {
     display: flex;
     width: 100%;
     height: 100vh;
-    position: relative;
+    /* position: relative; */
 }
 
 .about-me_image, .about-me_content {
@@ -23,12 +23,12 @@ body {
 .about-me_image img {
     position: absolute;
     left: 2vw;
-    top: -10vh;
+    /* top: -10vh; */
     max-width: 60vw;
     filter: opacity(0.7);
     mix-blend-mode: luminosity; /* Similaire à background-blend-mode */
     background-color: var(--blue);
-    transform: translate(20px, 80px);
+    /* transform: translate(20px, 80px); */
     z-index: -1;
 }
 
@@ -79,12 +79,12 @@ body {
     position: absolute;
     width: 100%;
     height: 45vh;
-    bottom: 6vh;
+    bottom: 0;
     left: 1.5vw;
     display: flex;
     justify-content: end;
     align-items: center;
-    background: linear-gradient(#10007100 , #0f0071 95%);
+    background: linear-gradient(#10007100 , #0f0071 90%);
     z-index: 2;
 }
 
@@ -103,10 +103,105 @@ body {
 
 /* COMPÉTENCE */
 
-.competence {
+.competences {
     height: 100vh;
     padding: 0 10vw;
 }
+
+.competences_text {
+    color: var(--white);
+    margin-top: 3vh;
+    margin-left: 5vw;
+    width: 80%;
+    font-size: clamp(1rem, 2vw, 2.5rem);
+}
+
+.competences_title {
+    margin-left: 5vw;
+}
+
+.competence {
+    background-color: var(--beige);
+    width: 24vw;
+    padding: 3vw;
+    border-radius: 40px;
+}
+
+.testimonie-action {
+    display: block;
+    width: fit-content;
+    margin: 2.6vh auto;
+}
+
+.slider {
+    width: 100%;
+    margin: 5vh 0;
+    overflow: hidden;
+}
+
+.slider .list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    min-width: calc(24vw * var(--items));
+    position: relative;
+}
+
+.slider .competence {
+    width: var(--width);
+    position: absolute;
+    left: 100%;
+    animation: autorun 30s linear infinite;
+    animation-delay: calc( (30s / var(--items)) * (var(--position) - 1) - 30s);
+}
+
+.header {
+    margin-bottom: 4vh;
+    display: flex;
+    align-items: center;
+}
+
+.header-name {
+    font-size: 1.4rem;
+}
+
+.header-username {
+    font-size: .9rem;
+}
+
+.header-profile {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    background-color: var(--blue);
+    margin-right: 10px;
+}
+
+.competence-info-title {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    margin-bottom: 1.5vh;
+}
+
+/* FORMATION */
+
+.formations {
+    height: 100vh;
+    padding: 0 10vw;
+}
+
+.formations_text {
+    color: var(--white);
+    margin-top: 3vh;
+    margin-left: 5vw;
+    width: 80%;
+    font-size: clamp(1rem, 2vw, 2.5rem);
+}
+
+.formations_title {
+    margin-left: 5vw;
+}
+
 
 @media (max-width: 1280px) {
     *{
@@ -122,7 +217,7 @@ body {
     .join-me {
         left: 0vw;
         height: 45vh;
-        bottom: 20vh;
+        bottom: 0;
     }
 }
 
@@ -134,18 +229,39 @@ body {
 
     .join-me {
         height: 65vh;
-        bottom: 4vh;
+        bottom: 0;
     }
 }
 
 @media (min-width: 1920px) { 
+    #about-me {
+        height: 135vh;
+    }
+
     .about-me_content img {
         min-width: 60vw;
         top: -62px;
     }
 
     .join-me {
-        height: 45vh;
-        bottom: 14vh;
+        height: 60vh;
+        bottom: 0;
+    }
+}
+
+@keyframes autorun {
+    from {
+        left: 100%;
+    }
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+@keyframes autorun2 {
+    from {
+        right: 100%;
+    }
+    to {
+        right: calc(var(--taille) * -1);
     }
 }
