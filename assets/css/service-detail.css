@@ -1,0 +1,123 @@
+body {
+    background-color: var(--blue);
+    overflow-x: hidden;
+}
+
+
+/* SERVICES */
+
+.service {
+    width: 100%;
+    margin-top: 20vh;
+    padding: 0px 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-content {
+    width: 50vw;
+}
+
+.service-content-text {
+    color: var(--white);
+}
+
+.service-content-layout {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 5vw;
+}
+
+.service-content-item:nth-child(1),
+.service-content-item:nth-child(2),
+.service-content-item:nth-child(3),
+.service-content-item:nth-child(4),
+.service-content-item:nth-child(5),
+.service-content-item:nth-child(6) {
+    width: 30%;
+}
+
+.placeholder {
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 50%;
+    background-color: var(--beige);
+    margin-bottom: 1vw;
+}
+
+.service-content-item-title {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+.service-content-item-text {
+    color: var(--white);
+    font-size: clamp(.8rem, 1.2vw, 1.5rem);
+}
+
+.top-service {
+    margin: 10vw 0px 5vw;
+    padding: 0px 5vw;
+}
+
+.top-service-title {
+    text-align: center; 
+}
+
+.top-service-text {
+    text-align: center;
+    color: var(--white);
+}
+.card-wrapper {
+    margin-top: 10vh;
+    display: flex;
+    gap: 60px;
+}
+
+.formation-card {
+    width: 15vw;
+    height: 35vh;
+}
+
+.card-header {
+    background-color: var(--beige);
+    height: 75%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-footer {
+    background-color: var(--blue);
+    height: 25%;
+    box-shadow: 0px 1px 5px 1px #1111118e;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-footer-title {
+    color: var(--yellow);
+    font-size: clamp(.8rem, 1.3vw, 2.5rem);
+}
+
+/* PRICING */
+
+.pricing {
+    width: 100vw;
+    background-color: var(--white);
+}
+
+.pricing-title {
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.pricing-text {
+    text-align: center;
+    color: var(--blue);
+}
