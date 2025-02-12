@@ -1,24 +1,6 @@
-function fetchSVG(url, selector) {
-    return fetch(url)
-        .then(response => response.text())
-        .then(svg => {
-            document.querySelector(selector).innerHTML = svg;
-        });
-}
+window.onload = function() {
+    document.body.style.visibility = "visible"; // Affiche la page une fois chargée
+};
 
-function loadSVG() {
-    // Use requestAnimationFrame to ensure the browser is not blocked while loading the SVGs
-    requestAnimationFrame(() => {
-        Promise.all([
-            fetchSVG("assets/images/logo-aestetik.svg", ".logo"),
-        ]).then(() => {
-            // Show the body after SVGs are loaded
-            // document.body.style.display = 'block';
-        }).catch(error => {
-            console.error('Error loading SVG:', error);
-        });
-    });
-}
-
-// Lazy load SVGs after the window has loaded
-window.addEventListener('load', loadSVG);
+// Masquer la page au début
+document.body.style.visibility = "hidden";
