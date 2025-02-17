@@ -169,11 +169,3 @@ body {
         left: calc(var(--width) * -1);
     }
 }
-@keyframes autorun2 {
-    from {
-        right: 100%;
-    }
-    to {
-        right: calc(var(--taille) * -1);
-    }
-}

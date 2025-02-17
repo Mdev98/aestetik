@@ -121,3 +121,145 @@ body {
     text-align: center;
     color: var(--blue);
 }
+
+.pricing-container {
+    padding: 5vw 10vw;
+    display: flex;
+    gap: 20px;
+}
+
+.pricing-card {
+    width: 20vw;
+    border-radius: 20px;
+    background-color: rgba(16, 0, 113, 0.09);
+    padding: 2vw;
+}
+
+.pricing-card-header_title {
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    font-weight: 900;
+}
+
+
+.pricing-card-header_text {
+    margin-top: .5vw;
+}
+
+.pricing-card-body {
+    margin: 2vw 0px;
+}
+
+.pricing-card-body_price {
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    font-weight: 900;
+    margin-bottom: 1vw;
+}
+
+.pricing-card-body_action {
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.pricing-card-footer_include {
+    display: block;
+    margin: .5vw 0px;
+}
+
+
+.testimonies {
+    width: 100%;
+}
+
+.testimonies-title {
+    width: fit-content;
+    margin: 8vw auto 10px;
+    color: var(--yellow);
+}
+
+.testimonies-text {
+    width: 50vw;
+    text-align: center;
+    margin: auto; 
+    color: var(--white);
+}
+
+/* TESTIMONIES */
+
+.testimonie {
+    background-color: var(--beige);
+    width: 300px;
+    padding: 40px 50px;
+    border-radius: 40px;
+}
+
+.testimonie-action {
+    display: block;
+    width: fit-content;
+    margin: 2.6vh auto;
+}
+
+.slider {
+    width: 80%;
+    margin: 3.5vh auto 10px;
+    overflow: hidden;
+    
+}
+
+.slider .list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45vh;
+    min-width: calc(300px * var(--items));
+    position: relative;
+}
+
+.slider .testimonie {
+    width: var(--width);
+    position: absolute;
+    left: 100%;
+    animation: autorun 30s linear infinite;
+    animation-delay: calc( (30s / var(--items)) * (var(--position) - 1) - 30s);
+}
+
+.client {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.client-name {
+    font-size: 1rem;
+}
+
+.client-username {
+    font-size: .9rem;
+}
+
+.client-profile {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    background-color: var(--blue);
+    margin-right: 10px;
+}
+
+.testimonie-info-title {
+    font-size: 1.2rem;
+}
+
+.testimonie-info-text {
+    font-size: 1rem;
+}
+
+
+
+
+@keyframes autorun {
+    from {
+        left: 100%;
+    }
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
