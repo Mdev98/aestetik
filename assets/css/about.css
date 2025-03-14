@@ -269,6 +269,8 @@ body {
         left: 0vw;
         height: 45vh;
         bottom: 0;
+        display: flex;
+        align-items: baseline;
     }
 }
 

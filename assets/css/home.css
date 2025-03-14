@@ -164,6 +164,8 @@ section {
     width: 20vw;
     height: 35vh;
     margin: 0px 3vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:nth-child(odd) {
@@ -172,13 +174,15 @@ section {
 
 .card-img {
     width: 100%;
-    min-height: 20vh;
+    min-height: 60%;
     background-color: var(--blue);
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    flex: 1;
 }
 
 .card-desc {
+    flex: 1;
     background-color: var(--beige);
     padding: 30px 20px;
     border-bottom-left-radius: 40px;
@@ -916,13 +920,16 @@ textarea {
     .cards {
         display: flex;
         justify-content: center;
-        margin: 5vw 0px;
+        margin: 2vw 0px;
     }
 
     .card:nth-child(odd) {
-        margin-top: 8vw;
+        margin-top: 3vw;
     }
 
+    .about-action {
+        transform: translateY(0vw);
+    }
     .card-text {
         font-size: clamp(1vw, 1.5vw, 2.2vw);
         margin: 1vw 0px;
@@ -934,13 +941,15 @@ textarea {
 
     .card {
         width: 25vw;
-        height: 35vh;
+        height: 50vh;
         margin: 0px 3vw;
+        display: flex;
+        flex-direction: column;
     }
 
     .about-title {
         width: fit-content;
-        margin: 15vw auto 10px;
+        margin: 8vw auto 10px;
     }
 
     .about-text {
@@ -954,7 +963,7 @@ textarea {
     }
 
     .services-title {
-        margin: 16vw auto 10px;
+        margin: 8vw auto 10px;
     }
 
     .services-grid-parent {
@@ -970,7 +979,7 @@ textarea {
     }
 
     .testimonies-title {
-        margin: 16vw auto 10px;
+        margin: 8vw auto 10px;
     }
 
     .pill {
@@ -987,7 +996,7 @@ textarea {
     }
 
     .portfolio-title {
-        margin: 16vw auto 10px;
+        margin: 8vw auto 10px;
     }
 
     .desc-portfolio-text {
@@ -1028,9 +1037,9 @@ textarea {
 
     #micro {
         position: absolute;
-        max-width: 55vw;
-        top: -25vh;
-        left: 25vw;
+        max-width: 50vw;
+        top: -30vh;
+        left: 30vw;
         z-index: 5;
     }
 
@@ -1041,7 +1050,7 @@ textarea {
     }
 }
 
-@media (min-width: 1280px) and (max-width: 1430px) {
+@media (min-width: 1280px) and (max-width: 1439px) {
     #plume {
         width: 20vw;
         position: absolute;

@@ -1,0 +1,145 @@
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 100px 80px;
+}
+
+.contact-title {
+    width: fit-content;
+    margin: 10px 0px;
+    color: var(--yellow);
+    font-size: clamp(1.5vw, 6.5vw, 7vw);
+}
+
+.contact-text {
+    width: 20vw;
+    text-align: left;
+    margin: auto; 
+    color: var(--blue);
+}
+
+.contact-form {
+    width: 55vw;
+    height: 65vh;
+}
+
+.contact-form form {
+    width: 100%;
+    padding: 20px;
+    margin-left: 5vw;
+    position: relative;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-field {
+    width: 100%;
+    margin: 40px 0px;
+}
+
+label {
+    display: block;
+    font-family: freshwost;
+    color: var(--blue);
+    margin-left: 20px;
+}
+
+.form-field input {
+    outline: none;
+    border: none;
+    border-bottom: 4px solid var(--blue);
+    width: 79%;
+    padding: 10px 20px;
+    font-family: freshwost;
+    font-size: clamp(.8vw, 1.2vw, 1.5vw);
+}
+
+textarea {
+    font-family: freshwost;
+    display: block;
+    border: none;
+    outline: none;
+    border-bottom: 4px solid var(--blue);
+    width: 90%;
+    height: 30vh;
+    font-size: clamp(.8vw, 1.2vw, 1.5vw);
+}
+
+.contact-form-action {
+    border: none;
+    color: var(--blue);
+    font-family: freshwost;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+
+    bottom: 5vh;
+    right: 7vw;
+}
+
+.follow-me {
+    background-color: var(--blue);
+    padding: 8vw 8vw 0;
+}
+
+.follow-me_title {
+    text-align: center;
+    position: relative;
+    margin-bottom: 15vw;
+}
+
+.follow-me_title::after {
+    content: '';
+    background-image: url(../icones/Onmysocial.svg);
+    width: 54vw;
+    height: 20vw;
+    background-size: cover;
+    position: absolute;
+    top: -3vw;
+    left: 14vw;
+}
+
+.join-me {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5vw;
+}
+
+.action-social {
+    color: var(--white);
+    font-size: clamp(.8vw, 3vw, 3.5vw);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.action-social img {
+    margin-left: 10px;
+}
+
+footer {
+    background-color: var(--blue);
+}
+.footer-text {
+    color: var(--white);
+    font-weight: bold;
+    font-size: clamp(.8vw, 3vw, 3.5vw);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vw;
+}
+
+.footer-text img {
+    margin-right: 10px;
+}
