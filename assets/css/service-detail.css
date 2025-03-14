@@ -165,7 +165,7 @@ body {
     margin: .5vw 0px;
 }
 
-
+/* TESTIMONIES */
 .testimonies {
     width: 100%;
 }
@@ -183,7 +183,7 @@ body {
     color: var(--white);
 }
 
-/* TESTIMONIES */
+
 
 .testimonie {
     background-color: var(--beige);
