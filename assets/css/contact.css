@@ -94,18 +94,19 @@ textarea {
 .follow-me_title {
     text-align: center;
     position: relative;
-    margin-bottom: 15vw;
+    margin-bottom: 10vw;
 }
 
 .follow-me_title::after {
     content: '';
     background-image: url(../icones/Onmysocial.svg);
-    width: 54vw;
+    width: 50vw;
     height: 20vw;
     background-size: cover;
     position: absolute;
     top: -3vw;
     left: 14vw;
+    transform: scale(.8);
 }
 
 .join-me {
@@ -142,4 +143,12 @@ footer {
 
 .footer-text img {
     margin-right: 10px;
+}
+
+#aestetik {
+    width: 10vw;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 6vw);
 }
