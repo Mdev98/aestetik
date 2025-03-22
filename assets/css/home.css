@@ -5,28 +5,36 @@ html {
 }
 
 main {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    /* height: 100vh; */
+    /* overflow-y: scroll;
+    scroll-snap-type: y mandatory; */
 }
 
+
 section {
-    /* scroll-snap-align: start; */
+    width: 100vw;
+    height: 100vh;
     position: sticky;
     top: 0;
     z-index: 2;
 }
 
-.hero {
-    width: 100vw;
-    height: 100vh;
+section:nth-child(odd) {
     background-color: var(--blue);
+}
+section:nth-child(even) {
+    background-color: var(--white);
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hero-banner {
+.hero-container {
     max-width: 80vw;
     display: flex;
     justify-content: center;
@@ -48,95 +56,26 @@ section {
     animation: fadeUp 1s 1.6s both, rotate 6s 2.6s linear infinite;
 }
 
-@media (min-width: 1024px) and (max-width: 1430px) {
-    #plume {
-        width: 20vw;
-        position: absolute;
-        left: 6vw;
-        bottom: 9vh;
-    }
-
-    #camada {
-        width: 20vw;
-        position: absolute;
-        left: -3vw;
-        top: 12vh;
-    }
-
-    #aestetik {
-        width: 15vw;
-        position: absolute;
-        right: 4vw;
-        bottom: 18vh;
-    }
-}
-
-@media (min-width: 1440px) {
-    #plume {
-        width: 20vw;
-        position: absolute;
-        left: 6vw;
-        bottom: 1vh;
-    }
-
-    #camada {
-        width: 16vw;
-        position: absolute;
-        left: 0vw;
-        top: 5vh;
-    }
-
-    #aestetik {
-        width: 15vw;
-        position: absolute;
-        right: 3vw;
-        bottom: 10vh;
-    }
-}
-  
-/* Pour les écrans larges */
-@media (min-width: 1500px) {
-    #plume {
-        max-width: 16vw;
-        position: absolute;
-        left: 5vw;
-        bottom: -1vh;
-    }
-
-    #camada {
-        max-width: 15vw;
-        position: absolute;
-        left: 0vw;
-        top: 1vh;
-    }
-
-    #aestetik {
-        max-width: 15vw;
-        position: absolute;
-        right: 5vh;
-        bottom: 10vh;
-    }
-}
-
 
 
 /* ABOUT SECTION */
 
-
 .about {
     width: 100%;
-    height: 100vh;
-    background-color: var(--white);
-    border: 1px solid var(--white);
+    height: 100%;
     background-image: url('../images/A.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 4vw;
 }
 
 .about-title {
     width: fit-content;
-    margin: 8vw auto 10px;
+    margin: 1vw auto;
 }
 
 .about-text {
@@ -151,40 +90,35 @@ section {
     width: fit-content;
     margin: 0px auto;
     font-weight: 700;
-    transform: translateY(3vw);
+    transform: translateY(1vw);
 }
 
 .cards {
     display: flex;
     justify-content: center;
+    gap: 5vw;
     margin: 2vw 0px;
 }
 
 .card {
     width: 20vw;
-    height: 35vh;
-    margin: 0px 3vw;
-    display: flex;
-    flex-direction: column;
 }
 
 .card:nth-child(odd) {
-    margin-top: 4vw;
+    transform: translateY(5vw);
 }
 
 .card-img {
     width: 100%;
-    min-height: 60%;
+    height: 12vw;
     background-color: var(--blue);
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    flex: 1;
 }
 
 .card-desc {
-    flex: 1;
     background-color: var(--beige);
-    padding: 30px 20px;
+    padding: 2vw;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 }
@@ -195,8 +129,8 @@ section {
 }
 
 .card-text {
-    font-size: clamp(.8vw, 1vw, 1.2vw);
-    margin: 1vw 0px;
+    font-size: clamp(.8vw, 1.1vw, 1.2vw);
+    margin: .4vw 0px;
 }
 
 .card-action {
@@ -206,18 +140,20 @@ section {
     font-weight: 700;
 }
 
-/* SERVICES SECTION */
+/* SERVICES */
 
 .services {
     width: 100%;
-    height: 100vh;
-    background-color: var(--blue);
-    border: 1px solid var(--blue);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2vw;
 }
 
 .services-title {
     width: fit-content;
-    margin:6.5vw auto 10px;
+    margin:2vw auto;
     color: var(--yellow);
 }
 
@@ -292,15 +228,17 @@ section {
 
 .testimonies {
     width: 100%;
-    height: 100vh;
-    background-color: var(--white);
-    border: 1px solid var(--white);
+    height: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2vw;
 }
 
 .testimonies-title {
     width: fit-content;
-    margin: 8vw auto 10px;
+    margin: 2vw auto;
     color: var(--yellow);
 }
 
@@ -313,8 +251,9 @@ section {
 
 .testimonie {
     background-color: var(--beige);
-    width: 300px;
-    padding: 40px 50px;
+    width: var(--width);
+    height: auto;
+    padding: 2vw;
     border-radius: 40px;
 }
 
@@ -335,8 +274,8 @@ section {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 45vh;
-    min-width: calc(300px * var(--items));
+    height: 40vh;
+    max-width: calc(var(--width) * var(--items));
     position: relative;
 }
 
@@ -355,11 +294,11 @@ section {
 }
 
 .client-name {
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 .client-username {
-    font-size: .9rem;
+    font-size: .7rem;
 }
 
 .client-profile {
@@ -371,11 +310,11 @@ section {
 }
 
 .testimonie-info-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .testimonie-info-text {
-    font-size: 1rem;
+    font-size: clamp(.7rem, .9rem, 2rem);
 }
 
 .pills.slider {
@@ -383,7 +322,7 @@ section {
     width: 80%;
     overflow: hidden;
     position: relative;
-    height: 75px;
+    height: 5.5vw;
 
 }
 
@@ -404,15 +343,17 @@ section {
 
 .portfolio {
     width: 100%;
-    height: 100vh;
-    background-color: var(--blue);
-    border: 1px solid var(--blue);
+    height: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2vw;
 }
 
 .portfolio-title {
     width: fit-content;
-    margin: 6.5vw auto 10px;
+    margin: 2vw auto;
     color: var(--yellow);
 }
 
@@ -477,7 +418,7 @@ section {
 .porfolio-action {
     display: block;
     width: fit-content;
-    margin: 5vh auto;
+    margin: 0px auto;
     padding: 10px 30px;
 }
 
@@ -490,14 +431,12 @@ section {
 
 .contact {
     width: 100%;
-    height: 100vh;
-    background-color: var(--white);
-    border: 1px solid var(--white);
+    height: 100%;
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding: 100px 80px;
+    padding: 10vw 8vw;
 }
 
 .contact-title {
@@ -657,7 +596,7 @@ textarea {
     position: absolute;
     max-width: 55vw;
     top: -40vh;
-    left: 30vw;
+    left: 25vw;
     z-index: 5;
 }
 
@@ -692,6 +631,11 @@ textarea {
     margin-right: 10px;
 }
 
+.signature svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
   
 /* SVGS */
@@ -713,41 +657,6 @@ textarea {
       fill: #fdc300;
     }
   }
-
-#Tracé_906 {
-    transform: matrix(0.998, -0.07, 0.07, 0.998, 958.734, 400.939);
-    animation: expandUp 1s both;
-}
-
-#Tracé_907 {
-    animation : fadeIn 1s .3s both;
-    transform: translate(3px, 620px);
-}
-
-#Tracé_908 {
-    transform : matrix(0.998, 0.07, -0.07, 0.998, 951.268, 741.869);
-    animation: expandDown 1s .8s both;
-}
-
-#eclair-icon {
-    transform : translate(1315px, 216px);
-    animation: scale 1s 1.2s both, ZoomoutZoomin 2s 2.6s linear infinite;
-}
-
-#Camada_3 {
-    transform : matrix(0.875, -0.485, 0.485, 0.875, 158.82, 238.594);
-    animation: arriveUp 1s 1.4s both;
-}
-
-#Groupe_750 {
-    transform : translateY(200px);
-    animation: fadeUp 1s 1.6s both;
-}
-
-#Objects {
-    transform: matrix(1, -0.017, 0.017, 1, 56.977, 410.077);
-    animation: arriveDown 1s 1.8s both;
-}
 
 /* ANIMATION */
 
@@ -894,7 +803,6 @@ textarea {
 }
 
 
-
 @media (min-width: 1024px) and (max-width: 1430px) {
     #plume {
         width: 20vw;
@@ -916,166 +824,6 @@ textarea {
         right: 4vw;
         bottom: 18vh;
     }
-
-    .cards {
-        display: flex;
-        justify-content: center;
-        margin: 2vw 0px;
-    }
-
-    .card:nth-child(odd) {
-        margin-top: 3vw;
-    }
-
-    .about-action {
-        transform: translateY(0vw);
-    }
-    .card-text {
-        font-size: clamp(1vw, 1.5vw, 2.2vw);
-        margin: 1vw 0px;
-    }
-
-    .card-title {
-        font-size: clamp(1vw, 2.5vw, 3vw);
-    }
-
-    .card {
-        width: 25vw;
-        height: 50vh;
-        margin: 0px 3vw;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-title {
-        width: fit-content;
-        margin: 8vw auto 10px;
-    }
-
-    .about-text {
-        width: 55vw;
-        text-align: center;
-        margin: auto;
-    }
-
-    .menu {
-        width: 40vw;
-    }
-
-    .services-title {
-        margin: 8vw auto 10px;
-    }
-
-    .services-grid-parent {
-        margin: 5vh auto;
-    }
-
-    .desc-services-text {
-        font-size: 1.3rem;
-    }
-
-    .services-action {
-        font-size: 1.2rem;
-    }
-
-    .testimonies-title {
-        margin: 8vw auto 10px;
-    }
-
-    .pill {
-        height: 5vh;
-    }
-
-    .client-profile {
-        width: 4vw;
-        height: 4vw;
-    }
-
-    .porfolio-grid-parent {
-        width: 90vw;
-    }
-
-    .portfolio-title {
-        margin: 8vw auto 10px;
-    }
-
-    .desc-portfolio-text {
-        font-size: 1.4rem;
-    }
-
-    .contact-text {
-        width: 25vw;
-    }
-
-    .conclusion-title-blur {
-        top: -6vh;
-    }
-
-    .conclusion {
-        padding-bottom: 15vh;
-    }
-
-    .conclusion-text {
-        font-size: clamp(1vw, 1.9vw, 2vw);
-    }
-
-    .conclusion-subtext {
-        margin-top: 1vh;
-        display: block;
-    }
-
-    #conclusion-aestetik {
-        right: 2.5vw;
-        bottom: -4vh;
-        max-width: 8vw;
-    }
-
-    .paragraph {
-        width: 40vw;
-        padding: 2vh 10vw 2vh 2vw;
-    }
-
-    #micro {
-        position: absolute;
-        max-width: 50vw;
-        top: -30vh;
-        left: 30vw;
-        z-index: 5;
-    }
-
-    .signature svg {
-        width: 500px; 
-        position: relative;
-        top: -5vh;
-    }
-}
-
-@media (min-width: 1280px) and (max-width: 1439px) {
-    #plume {
-        width: 20vw;
-        position: absolute;
-        left: 6vw;
-        bottom: 4vh;
-    }
-
-    #camada {
-        width: 20vw;
-        position: absolute;
-        left: -3vw;
-        top: 6vh;
-    }
-
-    #aestetik {
-        width: 15vw;
-        position: absolute;
-        right: 4vw;
-        bottom: 15vh;
-    }
-
-    .signature svg {
-        left: 4.3vw;
-    }
-    
 }
 
 @media (min-width: 1440px) {
@@ -1090,7 +838,7 @@ textarea {
         width: 16vw;
         position: absolute;
         left: 0vw;
-        top: 9vh;
+        top: 5vh;
     }
 
     #aestetik {
@@ -1098,14 +846,6 @@ textarea {
         position: absolute;
         right: 3vw;
         bottom: 10vh;
-    }
-
-    #micro {
-        position: absolute;
-        max-width: 55vw;
-        top: -44vh;
-        left: 25vw;
-        z-index: 5;
     }
 }
   
@@ -1131,32 +871,39 @@ textarea {
         right: 5vh;
         bottom: 10vh;
     }
+}
 
-    .signature svg {
-        width: 900px; 
-        position: relative;
-        top: -5vh;
-    }
+#Tracé_906 {
+    transform: matrix(0.998, -0.07, 0.07, 0.998, 958.734, 400.939);
+    animation: expandUp 1s both;
+}
 
-    #conclusion-aestetik {
-        position: absolute;
-        right: 2vw;
-        bottom: -6vh;
-        max-width: 10vw;
-    }
+#Tracé_907 {
+    animation : fadeIn 1s .3s both;
+    transform: translate(3px, 620px);
+}
 
-    .conclusion-subtext {
-        color: var(--yellow);
-        font-size: 2rem;
-        margin-top: 2vh;
-        display: block;
-    }
+#Tracé_908 {
+    transform : matrix(0.998, 0.07, -0.07, 0.998, 951.268, 741.869);
+    animation: expandDown 1s .8s both;
+}
 
-    #micro {
-        position: absolute;
-        width: 52vw;
-        top: -44vh;
-        left: 28vw;
-        z-index: 5;
-    }
+#eclair-icon {
+    transform : translate(1315px, 216px);
+    animation: scale 1s 1.2s both, ZoomoutZoomin 2s 2.6s linear infinite;
+}
+
+#Camada_3 {
+    transform : matrix(0.875, -0.485, 0.485, 0.875, 158.82, 238.594);
+    animation: arriveUp 1s 1.4s both;
+}
+
+#Groupe_750 {
+    transform : translateY(200px);
+    animation: fadeUp 1s 1.6s both;
+}
+
+#Objects {
+    transform: matrix(1, -0.017, 0.017, 1, 56.977, 410.077);
+    animation: arriveDown 1s 1.8s both;
 }
