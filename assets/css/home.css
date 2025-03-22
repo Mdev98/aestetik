@@ -4,13 +4,6 @@ html {
     scroll-behavior: smooth;
 }
 
-main {
-    /* height: 100vh; */
-    /* overflow-y: scroll;
-    scroll-snap-type: y mandatory; */
-}
-
-
 section {
     width: 100vw;
     height: 100vh;
